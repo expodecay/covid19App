@@ -10,7 +10,7 @@ import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 
-//test by raffi
+//test by raffi 2
 private const val TAG = "MainActivity"
 private const val KEY_INDEX = "index"
 class MainActivity : AppCompatActivity() {
