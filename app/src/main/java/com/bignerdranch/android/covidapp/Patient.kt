@@ -1,6 +1,6 @@
 package com.bignerdranch.android.covidapp
 
-//need to now about the variables used by webservice team to create proper attributes
+//need to now about the variables used by webservice team to create proper attributes.
 
 class Patient(val id:Int,val age:Int, val sex:Char,
 val Ethnicity: String, val Asthma : Boolean ){
