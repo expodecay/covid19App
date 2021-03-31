@@ -9,6 +9,9 @@ class Gender : AppCompatActivity() {
         setContentView(R.layout.activity_gender)
 
         //
+        //saveAnswer() to store input to patient class
+
+        //
         // OnClick next transition to ethnicity_question
     }
 }

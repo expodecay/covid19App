@@ -24,6 +24,8 @@ class Age : AppCompatActivity() {
         //
         //Need to use the numberpad to collect age for editText
 
+        //
+        //saveAnswer() to store input to patient class
 
         //
         // OnClick next transition to gender_question
