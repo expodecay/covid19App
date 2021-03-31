@@ -13,7 +13,7 @@ class Age : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_age)
 
-        // pull up keyboard to collect ino
+        // pull up keyboard to collect info
         fun showSoftKeyboard(view: View) {
             if (view.requestFocus()) {
                 val imm: InputMethodManager =
