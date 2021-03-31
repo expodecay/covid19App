@@ -1,0 +1,51 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context="com.bignerdranch.android.covidapp.Age">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="24dp"
+        android:text="@string/question_ethnicity"/>
+
+    <CheckBox
+        android:id="@+id/American_Indian"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/ethnic_American_Indian_button" />
+
+    <CheckBox
+        android:id="@+id/Asian"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/ethnic_Asian_button" />
+
+    <CheckBox
+        android:id="@+id/Black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/ethnic_Black_button" />
+
+    <CheckBox
+        android:id="@+id/Hispanic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/ethnic_Hispanic_button" />
+
+    <CheckBox
+        android:id="@+id/Pacific"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/ethnic_Pacific_Islander_button" />
+
+    <CheckBox
+        android:id="@+id/White"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/ethnic_White_button" />
+
+
+</LinearLayout>

@@ -24,4 +24,14 @@
     <string name="correct_toast">Correct!</string>
     <string name="incorrect_toast">Incorrect!</string>
     <string name="next_button">Next</string>
+
+    <string name="male_button">Male</string>
+    <string name="female_button">Female</string>
+
+    <string name="ethnic_American_Indian_button">American Indian or Alaska Native</string>
+    <string name="ethnic_Asian_button">Asian</string>
+    <string name="ethnic_Black_button">Black or African American</string>
+    <string name="ethnic_Hispanic_button">Hispanic or Latino</string>
+    <string name="ethnic_Pacific_Islander_button">Native Hawaiian or Other Pacific Islander</string>
+    <string name="ethnic_White_button">White</string>
 </resources>
