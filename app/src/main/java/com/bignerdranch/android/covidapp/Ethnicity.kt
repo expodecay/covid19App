@@ -7,5 +7,8 @@ class Ethnicity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ethnicity)
+
+        //
+        // OnClick next transition to mainActivity
     }
 }

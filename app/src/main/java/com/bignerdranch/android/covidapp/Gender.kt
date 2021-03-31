@@ -7,5 +7,8 @@ class Gender : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_gender)
+
+        //
+        // OnClick next transition to ethnicity_question
     }
 }

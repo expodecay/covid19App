@@ -23,5 +23,9 @@ class Age : AppCompatActivity() {
         }
         //
         //Need to use the numberpad to collect age for editText
+
+
+        //
+        // OnClick next transition to gender_question
     }
 }
