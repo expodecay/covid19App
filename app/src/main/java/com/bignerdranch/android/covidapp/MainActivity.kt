@@ -87,6 +87,8 @@ class MainActivity : AppCompatActivity() {
         questionTextView.setText(questionTextResId)
     }
 
+    //
+    // Needs to become storeAnswer to patient class
     private fun checkAnswers(userAnswer: Boolean){
         // val correctAnswer = questionBank[currentIndex].answer
         val correctAnswer = covidViewModel.currentQuestionAnswer
