@@ -32,6 +32,8 @@
             android:text="@string/no_button" />
     </LinearLayout>
 
+
+
     <Button
         android:id="@+id/next_button"
         android:layout_width="wrap_content"

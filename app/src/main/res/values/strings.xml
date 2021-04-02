@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Covid19App</string>
 
+    <!-- QuestionBank -->
     <string name="question_age">What is your age?</string>
     <string name="question_gender">What is your gender?</string>
     <string name="question_ethnicity">What is your ethnicity?</string>
@@ -18,7 +19,7 @@
     <string name="question_hypertension">Do you have Hypertension?</string>
     <string name="question_other">Do you have any Other disease?</string>
 
-
+    <!-- Buttons -->
     <string name="yes_button">Yes</string>
     <string name="no_button">No</string>
     <string name="correct_toast">Correct!</string>
@@ -28,12 +29,14 @@
     <string name="male_button">Male</string>
     <string name="female_button">Female</string>
 
+    <!-- Ethnicities -->
     <string name="ethnic_American_Indian_button">American Indian or Alaska Native</string>
     <string name="ethnic_Asian_button">Asian</string>
     <string name="ethnic_Black_button">Black or African American</string>
     <string name="ethnic_Hispanic_button">Hispanic or Latino</string>
     <string name="ethnic_Pacific_Islander_button">Native Hawaiian or Other Pacific Islander</string>
     <string name="ethnic_White_button">White</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
