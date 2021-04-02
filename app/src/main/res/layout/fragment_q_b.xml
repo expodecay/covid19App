@@ -3,8 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    android:orientation="vertical">
+    tools:context=".QBFragment">
 
     <TextView
         android:id="@+id/question_text_view"
@@ -12,7 +11,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:padding="24dp"
-        tools:text="@string/question_age" />
+        tools:text="@string/question_asthma" />
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -42,11 +41,4 @@
         android:text="@string/next_button"
         android:drawableEnd="@drawable/arrow_right"
         android:drawablePadding="4dp"/>
-
-    <fragment
-        android:id="@+id/fragment"
-        android:name="com.bignerdranch.android.covidapp.AgeFragment"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-
 </FrameLayout>
