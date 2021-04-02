@@ -4,32 +4,28 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context="com.bignerdranch.android.covidapp.Age">
+    tools:context=".AgeFragment">
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="24dp"
-        android:text="@string/question_gender"/>
+        android:text="@string/question_age"/>
 
-    <Button
-        android:id="@+id/male_button"
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/editTextNumber2"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/male_button" />
-    <Button
-    android:id="@+id/female_button"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="@string/female_button" />
+        android:ems="10"
+        android:inputType="number" />
 
     <Button
         android:id="@+id/next_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
+        android:text="@string/next_button"
         android:drawableEnd="@drawable/arrow_right"
-        android:drawablePadding="4dp"
-        android:text="@string/next_button" />
+        android:drawablePadding="4dp"/>
 
 
 </LinearLayout>

@@ -34,4 +34,6 @@
     <string name="ethnic_Hispanic_button">Hispanic or Latino</string>
     <string name="ethnic_Pacific_Islander_button">Native Hawaiian or Other Pacific Islander</string>
     <string name="ethnic_White_button">White</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
