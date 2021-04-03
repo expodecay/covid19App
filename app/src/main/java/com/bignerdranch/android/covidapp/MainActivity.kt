@@ -14,6 +14,7 @@ private const val TAG = "MainActivity"
 private const val KEY_INDEX = "index"
 class MainActivity : AppCompatActivity() {
 
+/*
     private lateinit var yesButton: Button
     private lateinit var noButton: Button
     private lateinit var nextButton: Button
@@ -23,11 +24,18 @@ class MainActivity : AppCompatActivity() {
         ViewModelProviders.of(this).get(CovidViewModel::class.java)
     }
 
+
+
+ */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState) // called when an instance of an activity is created
         Log.d(TAG, "onCreate(Bundle?) called")
         setContentView(R.layout.activity_main) // gives the activity it's UI to manage (it inflates a layout)
-
+        title = "KotlinApp"
+        val fragmentManager = supportFragmentManager
+        val fragmentTransaction = fragmentManager.beginTransaction()
+        fragmentTransaction.replace(R.id.frameLayout, AgeFragment()).commit()
+/*
         val currentIndex = savedInstanceState?.getInt(KEY_INDEX, 0) ?: 0
         covidViewModel.currentIndex = currentIndex
 
@@ -52,7 +60,11 @@ class MainActivity : AppCompatActivity() {
             updateQuestion()
         }
         updateQuestion()
+
+ */
     }
+
+
     override fun onStart() {
         super.onStart()
         Log.d(TAG, "onStart() called")
@@ -65,12 +77,14 @@ class MainActivity : AppCompatActivity() {
         super.onPause()
         Log.d(TAG, "onPause() called")
     }
-
+/*
     override fun onSaveInstanceState(savedInstanceState: Bundle) {
         super.onSaveInstanceState(savedInstanceState)
         Log.i(TAG, "onSaveInstanceState")
         savedInstanceState.putInt(KEY_INDEX, covidViewModel.currentIndex)
     }
+
+ */
 
     override fun onStop() {
         super.onStop()
@@ -80,12 +94,14 @@ class MainActivity : AppCompatActivity() {
         super.onDestroy()
         Log.d(TAG, "onDestroy() called")
     }
-
+/*
     private fun updateQuestion(){
         // val questionTextResId = questionBank[currentIndex].textResId
         val questionTextResId = covidViewModel.currentQuestionText
         questionTextView.setText(questionTextResId)
     }
+
+
 
     //
     // Needs to become storeAnswer to patient class
@@ -99,4 +115,6 @@ class MainActivity : AppCompatActivity() {
         }
         Toast.makeText(this, messageResId, Toast.LENGTH_SHORT).show()
     }
+
+ */
 }

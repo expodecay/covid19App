@@ -3,14 +3,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".GenderFragment">
+    tools:context=".QBFragment">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center_horizontal"
         android:padding="24dp"
-        android:text="@string/question_gender" />
+        android:text="@string/question_asthma" />
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -18,24 +18,24 @@
         android:layout_gravity="center_vertical|center_horizontal">
 
         <Button
-            android:id="@+id/male_button"
+            android:id="@+id/yes_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/male_button" />
+            android:text="@string/yes_button" />
 
         <Button
-            android:id="@+id/female_button"
+            android:id="@+id/no_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/female_button" />
+            android:text="@string/no_button" />
     </LinearLayout>
 
     <Button
-        android:id="@+id/gender_next_button"
+        android:id="@+id/qb_next_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
-        android:text="gender next"
+        android:text="QBank next"
         android:drawableEnd="@drawable/arrow_right"
         android:drawablePadding="4dp"/>
 </FrameLayout>
