@@ -20,7 +20,7 @@ class AgeFragment : Fragment() {
                               savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_age, container, false)
 
-        val Button = view?.findViewById<Button>(R.id.next_button) as TextView
+        val Button = view?.findViewById<Button>(R.id.age_next_button) as TextView
         Button.setOnClickListener {
             // get the fragment instance
             val nextFragment = GenderFragment()
@@ -29,7 +29,7 @@ class AgeFragment : Fragment() {
             // begin fragment transaction using fragment manager
             val transaction = manager.beginTransaction()
             // replace fragment in the container and finish the transaction
-            transaction.replace(R.id.fragment, nextFragment)
+            transaction.replace(R.id.frameLayout, nextFragment)
             transaction.addToBackStack(null)
             transaction.commit()
         }

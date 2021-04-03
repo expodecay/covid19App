@@ -8,9 +8,8 @@
     android:orientation="vertical">
 
 
-    <fragment
-        android:id="@+id/fragment"
-        android:name="com.bignerdranch.android.covidapp.AgeFragment"
+    <FrameLayout
+        android:id="@+id/frameLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
