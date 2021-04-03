@@ -28,30 +28,7 @@ class MainActivity : AppCompatActivity() {
         Log.d(TAG, "onCreate(Bundle?) called")
         setContentView(R.layout.activity_main) // gives the activity it's UI to manage (it inflates a layout)
 
-        val currentIndex = savedInstanceState?.getInt(KEY_INDEX, 0) ?: 0
-        covidViewModel.currentIndex = currentIndex
 
-        yesButton = findViewById(R.id.yes_button)
-        noButton = findViewById(R.id.no_button)
-        nextButton = findViewById(R.id.next_button)
-        questionTextView = findViewById(R.id.question_text_view)
-
-        yesButton.setOnClickListener{ view: View ->  // listener set to inform when button is pressed
-            // Do something in response to the click here
-            checkAnswers(true)
-        }
-
-        noButton.setOnClickListener { view: View ->
-            // Do something in response to the click here
-            checkAnswers(false)
-        }
-
-        nextButton.setOnClickListener {
-            // currentIndex=(currentIndex + 1 ) % questionBank.size
-            covidViewModel.moveToNext()
-            updateQuestion()
-        }
-        updateQuestion()
     }
     override fun onStart() {
         super.onStart()
