@@ -65,7 +65,7 @@ class QBFragment : Fragment() {
         val Button = view?.findViewById<Button>(R.id.qb_next_button) as TextView
         Button.setOnClickListener {
             val testText = view?.findViewById<TextView>(R.id.question_text_view)
-            testText.text="$currentIndex"
+            testText.text="${FragquestionBank[currentIndex]}"
             fragmoveToNext()
             updateQuestion()
         }
