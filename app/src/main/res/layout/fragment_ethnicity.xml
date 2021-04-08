@@ -1,0 +1,70 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".EthnicityFragment">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:padding="24dp"
+        android:text="@string/question_ethnicity"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center_vertical|center_horizontal">
+
+        <CheckBox
+            android:id="@+id/American_Indian"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ethnic_American_Indian_button" />
+
+        <CheckBox
+            android:id="@+id/Asian"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ethnic_Asian_button" />
+
+        <CheckBox
+            android:id="@+id/Black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ethnic_Black_button" />
+
+        <CheckBox
+            android:id="@+id/Hispanic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ethnic_Hispanic_button" />
+
+        <CheckBox
+            android:id="@+id/Pacific"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ethnic_Pacific_Islander_button" />
+
+        <CheckBox
+            android:id="@+id/White"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ethnic_White_button" />
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/ethnicity_next_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:text="Ethnicity next"
+        android:drawableEnd="@drawable/arrow_right"
+        android:drawablePadding="4dp"/>
+
+
+</FrameLayout>

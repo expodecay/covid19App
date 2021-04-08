@@ -7,9 +7,9 @@ private const val TAG = "CovidViewModel"
 class CovidViewModel : ViewModel() {
     var currentIndex = 0
     private val questionBank = listOf(
-        Questions(R.string.question_age, false),
-        Questions(R.string.question_gender, false),
-        Questions(R.string.question_ethnicity, false),
+       // Questions(R.string.question_age, false),
+       // Questions(R.string.question_gender, false),
+       // Questions(R.string.question_ethnicity, false),
         Questions(R.string.question_asthma, false),
         Questions(R.string.question_cardiovascular, false),
         Questions(R.string.question_lung, false),
@@ -32,6 +32,13 @@ class CovidViewModel : ViewModel() {
         get() = questionBank[currentIndex].textResId
 
     fun moveToNext(){
-        currentIndex = (currentIndex + 1) % questionBank.size
+        if(currentIndex == questionBank.lastIndex){
+            currentIndex = questionBank.lastIndex
+            //
+            // Need to transition to confirmation and transfer module
+        }
+        else {
+            currentIndex = currentIndex + 1
+        }
     }
 }
