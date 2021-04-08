@@ -15,56 +15,15 @@ private const val TAG = "MainActivity"
 private const val KEY_INDEX = "index"
 class MainActivity : AppCompatActivity() {
 
-/*
-    private lateinit var yesButton: Button
-    private lateinit var noButton: Button
-    private lateinit var nextButton: Button
-    private lateinit var questionTextView: TextView
-
-    private val covidViewModel: CovidViewModel by lazy{
-        ViewModelProviders.of(this).get(CovidViewModel::class.java)
-    }
-
-
-
- */
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState) // called when an instance of an activity is created
+        super.onCreate(savedInstanceState)
         Log.d(TAG, "onCreate(Bundle?) called")
-        setContentView(R.layout.activity_main) // gives the activity it's UI to manage (it inflates a layout)
+        setContentView(R.layout.activity_main)
         title = "KotlinApp"
         val fragmentManager = supportFragmentManager
         val fragmentTransaction = fragmentManager.beginTransaction()
         fragmentTransaction.replace(R.id.frameLayout, AgeFragment()).commit()
-/*
-        val currentIndex = savedInstanceState?.getInt(KEY_INDEX, 0) ?: 0
-        covidViewModel.currentIndex = currentIndex
-
-        yesButton = findViewById(R.id.yes_button)
-        noButton = findViewById(R.id.no_button)
-        nextButton = findViewById(R.id.next_button)
-        questionTextView = findViewById(R.id.question_text_view)
-
-        yesButton.setOnClickListener{ view: View ->  // listener set to inform when button is pressed
-            // Do something in response to the click here
-            checkAnswers(true)
-        }
-
-        noButton.setOnClickListener { view: View ->
-            // Do something in response to the click here
-            checkAnswers(false)
-        }
-
-        nextButton.setOnClickListener {
-            // currentIndex=(currentIndex + 1 ) % questionBank.size
-            covidViewModel.moveToNext()
-            updateQuestion()
-        }
-        updateQuestion()
-
- */
     }
-
 
     override fun onStart() {
         super.onStart()
@@ -78,14 +37,6 @@ class MainActivity : AppCompatActivity() {
         super.onPause()
         Log.d(TAG, "onPause() called")
     }
-/*
-    override fun onSaveInstanceState(savedInstanceState: Bundle) {
-        super.onSaveInstanceState(savedInstanceState)
-        Log.i(TAG, "onSaveInstanceState")
-        savedInstanceState.putInt(KEY_INDEX, covidViewModel.currentIndex)
-    }
-
- */
 
     override fun onStop() {
         super.onStop()
@@ -95,27 +46,4 @@ class MainActivity : AppCompatActivity() {
         super.onDestroy()
         Log.d(TAG, "onDestroy() called")
     }
-/*
-    private fun updateQuestion(){
-        // val questionTextResId = questionBank[currentIndex].textResId
-        val questionTextResId = covidViewModel.currentQuestionText
-        questionTextView.setText(questionTextResId)
-    }
-
-
-
-    //
-    // Needs to become storeAnswer to patient class
-    private fun checkAnswers(userAnswer: Boolean){
-        // val correctAnswer = questionBank[currentIndex].answer
-        val correctAnswer = covidViewModel.currentQuestionAnswer
-        val messageResId = if (userAnswer == correctAnswer) {
-            R.string.correct_toast
-        } else {
-            R.string.incorrect_toast
-        }
-        Toast.makeText(this, messageResId, Toast.LENGTH_SHORT).show()
-    }
-
- */
 }
