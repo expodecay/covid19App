@@ -60,7 +60,6 @@ class GenderFragment : Fragment() {
 
         femaleButton.setOnClickListener {
             Patient.Sex = "female"
-           updatetext.setText(Patient.get_age())
         }
 
     }
