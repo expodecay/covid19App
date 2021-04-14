@@ -8,8 +8,6 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.TextView
-import androidx.lifecycle.ViewModelProviders
-
 
 /**
  * A simple [Fragment] subclass.
@@ -17,6 +15,7 @@ import androidx.lifecycle.ViewModelProviders
  * create an instance of this fragment.
  */
 class EthnicityFragment : Fragment() {
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -25,18 +24,13 @@ class EthnicityFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_ethnicity, container, false)
         val Button = view?.findViewById<Button>(R.id.ethnicity_next_button) as TextView
         Button.setOnClickListener {
-            // get the fragment instance
             val nextFragment = QBFragment()
-            // get the support fragment manager instance
             val manager = (context as MainActivity).supportFragmentManager
-            // begin fragment transaction using fragment manager
             val transaction = manager.beginTransaction()
-            // replace fragment in the container and finish the transaction
             transaction.replace(R.id.frameLayout, nextFragment)
             transaction.addToBackStack(null)
             transaction.commit()
         }
-        // Inflate the layout for this fragment
         return view
     }
 
@@ -75,7 +69,5 @@ class EthnicityFragment : Fragment() {
             Patient.Ethnicity = white.text.toString()
             updatetext.setText(Patient.Ethnicity)
         }
-
     }
-
 }

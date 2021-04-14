@@ -41,8 +41,9 @@
         android:drawablePadding="4dp"/>
 
     <Button
-        android:id="@+id/lastButton"
+        android:id="@+id/showInput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button" />
+        android:text="Show Input"
+        android:layout_gravity="bottom"/>
 </FrameLayout>

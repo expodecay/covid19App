@@ -20,13 +20,13 @@ import androidx.lifecycle.ViewModel
  */
 
 class QBFragment : Fragment() {
-    private lateinit var yesButton: Button
-    private lateinit var noButton: Button
-    private lateinit var nextButton: Button
     private  var questionTextView =view?.findViewById<TextView>(R.id.question_text_view)
     var currentIndex = 1
     val list = arrayListOf<String>("Asthma","Cardio" , "Lung", "Immune", "Metaba", "Neuro", "Other",
     "Auto", "Obesity", "Pregnant", "Renal", "Gastro", "Hyper")
+    val fragcurrentQuestionText: Int
+        get() = FragquestionBank[currentIndex].textResId
+
     private val FragquestionBank = listOf(
         Questions(R.string.question_asthma, Patient.Asthma),
         Questions(R.string.question_cardiovascular, Patient.Cardio),
@@ -43,22 +43,14 @@ class QBFragment : Fragment() {
         Questions(R.string.question_hypertension, Patient.Hyper)
     )
 
-    private val covidViewModel: CovidViewModel by lazy{
-        ViewModelProviders.of(this).get(CovidViewModel::class.java)
-    }
-
-
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_q_b, container, false)
 
         val yesButton = view?.findViewById<Button>(R.id.yes_button) as TextView
-        val noButton = view?.findViewById<Button>(R.id.no_button) as TextView
         val Button = view?.findViewById<Button>(R.id.qb_next_button) as TextView
 
         yesButton.setOnClickListener {
-            var question = FragquestionBank[currentIndex].answer
-            FragquestionBank[currentIndex].answer = true
             if (list[currentIndex-1]=="Asthma")
                 Patient.Asthma = true
             if (list[currentIndex-1] == "Cardio")
@@ -95,8 +87,8 @@ class QBFragment : Fragment() {
             updateQuestion()
         }
 
-        // Delete this
-        val lastButton = view?.findViewById<Button>(R.id.lastButton) as TextView
+        // Delete this------------------------------------------------------------------------------
+        val lastButton = view?.findViewById<Button>(R.id.showInput) as TextView
         lastButton.setOnClickListener {
             // get the fragment instance
             val nextFragment = DeleteFragment()
@@ -109,13 +101,9 @@ class QBFragment : Fragment() {
             transaction.addToBackStack(null)
             transaction.commit()
         }
+        //------------------------------------------------------------------------------------------
         // Inflate the layout for this fragment
         return view
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
     }
 
      fun updateQuestion(){
@@ -123,12 +111,6 @@ class QBFragment : Fragment() {
         val questionTextResId = fragcurrentQuestionText
          questionTextView?.setText(questionTextResId)
     }
-     fun setAnswers(userAnswer: Boolean){
-        //send answers to patient class
-    }
-
-    val fragcurrentQuestionText: Int
-        get() = FragquestionBank[currentIndex].textResId
 
     fun fragmoveToNext(){
         if(currentIndex == FragquestionBank.lastIndex){

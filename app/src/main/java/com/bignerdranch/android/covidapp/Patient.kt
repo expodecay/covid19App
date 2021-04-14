@@ -6,10 +6,6 @@ import androidx.lifecycle.ViewModel
 //need to now about the variables used by webservice team to create proper attributes.
 
 object Patient {
-    init { }
-
-
-
 /*
     companion object {
         private var instance: Patient? = null
