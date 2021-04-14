@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
+import androidx.lifecycle.ViewModelProviders
 
 
 /**
@@ -15,6 +16,7 @@ import android.widget.TextView
  * create an instance of this fragment.
  */
 class GenderFragment : Fragment() {
+
 
 
 
@@ -42,6 +44,27 @@ class GenderFragment : Fragment() {
             // Inflate the layout for this fragment
             return view
     }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val updatetext = view.findViewById<TextView>(R.id.genderrrrrrr)
+        //val Patient=Patient()
+        val maleButton = view.findViewById<Button>(R.id.male_button) as TextView
+        val femaleButton = view.findViewById<Button>(R.id.female_button) as TextView
+
+        maleButton.setOnClickListener {
+            Patient.Sex = "male"
+
+        }
+
+        femaleButton.setOnClickListener {
+            Patient.Sex = "female"
+           updatetext.setText(Patient.get_age())
+        }
+
+    }
+
 
 
 }

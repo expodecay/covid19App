@@ -39,4 +39,10 @@
         android:text="QBank next"
         android:drawableEnd="@drawable/arrow_right"
         android:drawablePadding="4dp"/>
+
+    <Button
+        android:id="@+id/lastButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button" />
 </FrameLayout>

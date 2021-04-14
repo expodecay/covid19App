@@ -5,7 +5,9 @@
     android:orientation="vertical"
     tools:context=".AgeFragment">
 
+
     <TextView
+        android:id="@+id/ageText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
@@ -33,6 +35,4 @@
         android:text="age next"
         android:drawableEnd="@drawable/arrow_right"
         android:drawablePadding="4dp"/>
-
-
 </FrameLayout>

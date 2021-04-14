@@ -15,11 +15,14 @@ private const val TAG = "MainActivity"
 private const val KEY_INDEX = "index"
 class MainActivity : AppCompatActivity() {
 
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         Log.d(TAG, "onCreate(Bundle?) called")
         setContentView(R.layout.activity_main)
         title = "KotlinApp"
+        Patient // invoke singleton
         val fragmentManager = supportFragmentManager
         val fragmentTransaction = fragmentManager.beginTransaction()
         fragmentTransaction.replace(R.id.frameLayout, AgeFragment()).commit()
