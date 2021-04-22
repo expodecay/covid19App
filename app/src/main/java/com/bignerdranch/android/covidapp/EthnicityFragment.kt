@@ -41,33 +41,33 @@ class EthnicityFragment : Fragment() {
 
         val americanIndian = view.findViewById<CheckBox>(R.id.American_Indian)
         americanIndian?.setOnCheckedChangeListener { buttonView, isChecked ->
-            Patient.Ethnicity = americanIndian.text.toString()
-            updatetext.setText(Patient.Ethnicity)
+            Patient.ethnicity = americanIndian.text.toString()
+            updatetext.setText(Patient.ethnicity)
         }
         val asian = view.findViewById<CheckBox>(R.id.Asian)
         asian?.setOnCheckedChangeListener { buttonView, isChecked ->
-            Patient.Ethnicity = asian.text.toString()
-            updatetext.setText(Patient.Ethnicity)
+            Patient.ethnicity = asian.text.toString()
+            updatetext.setText(Patient.ethnicity)
         }
         val black = view.findViewById<CheckBox>(R.id.Black)
         black?.setOnCheckedChangeListener { buttonView, isChecked ->
-            Patient.Ethnicity = black.text.toString()
-            updatetext.setText(Patient.Ethnicity)
+            Patient.ethnicity = black.text.toString()
+            updatetext.setText(Patient.ethnicity)
         }
         val hispanic = view.findViewById<CheckBox>(R.id.Hispanic)
         hispanic?.setOnCheckedChangeListener { buttonView, isChecked ->
-            Patient.Ethnicity = hispanic.text.toString()
-            updatetext.setText(Patient.Ethnicity)
+            Patient.ethnicity = hispanic.text.toString()
+            updatetext.setText(Patient.ethnicity)
         }
         val pacific = view.findViewById<CheckBox>(R.id.Pacific)
         pacific?.setOnCheckedChangeListener { buttonView, isChecked ->
-            Patient.Ethnicity = pacific.text.toString()
-            updatetext.setText(Patient.Ethnicity)
+            Patient.ethnicity = pacific.text.toString()
+            updatetext.setText(Patient.ethnicity)
         }
         val white = view.findViewById<CheckBox>(R.id.White)
         white?.setOnCheckedChangeListener { buttonView, isChecked ->
-            Patient.Ethnicity = white.text.toString()
-            updatetext.setText(Patient.Ethnicity)
+            Patient.ethnicity = white.text.toString()
+            updatetext.setText(Patient.ethnicity)
         }
     }
 }

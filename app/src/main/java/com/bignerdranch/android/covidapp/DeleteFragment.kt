@@ -37,22 +37,22 @@ class DeleteFragment : Fragment() {
         val fifteen = view.findViewById<TextView>(R.id.Hyper) as TextView
         val sixteen = view.findViewById<TextView>(R.id.Auto) as TextView
 
-        one.setText(Patient.Age)
-        two.setText(Patient.Sex)
-        three.setText(Patient.Ethnicity)
-        four.setText(Patient.Asthma.toString())
-        five.setText(Patient.Cardio.toString())
-        six.setText(Patient.Lung.toString())
-        seven.setText(Patient.Immune.toString())
-        eight.setText(Patient.Metaba.toString())
-        nine.setText(Patient.Neuro.toString())
-        ten.setText(Patient.Other.toString())
-        eleven.setText(Patient.Obesity.toString())
-        twelve.setText(Patient.Pregnant.toString())
-        thirteen.setText(Patient.Renal.toString())
-        fourteen.setText(Patient.Gastro.toString())
-        fifteen.setText(Patient.Hyper.toString())
-        sixteen.setText(Patient.Auto.toString())
+        one.setText(Patient.age)
+        two.setText(Patient.sex)
+        three.setText(Patient.ethnicity)
+        four.setText(Patient.asthma.toString())
+        five.setText(Patient.cardio.toString())
+        six.setText(Patient.lung.toString())
+        seven.setText(Patient.immune.toString())
+        eight.setText(Patient.metaba.toString())
+        nine.setText(Patient.neuro.toString())
+        ten.setText(Patient.other.toString())
+        eleven.setText(Patient.obesity.toString())
+        twelve.setText(Patient.pregnant.toString())
+        thirteen.setText(Patient.renal.toString())
+        fourteen.setText(Patient.gastro.toString())
+        fifteen.setText(Patient.hyper.toString())
+        sixteen.setText(Patient.auto.toString())
 
 
         // Inflate the layout for this fragment

@@ -28,7 +28,7 @@ class AgeFragment: Fragment()  {
 
             editText = view.findViewById<EditText>(R.id.editTextNumber2)
             input = editText.text.toString()
-            Patient.Age = input
+            Patient.age = input
 
             // get the fragment instance
             val nextFragment = GenderFragment()

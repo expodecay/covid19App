@@ -41,11 +41,11 @@ class GenderFragment : Fragment() {
         val femaleButton = view.findViewById<Button>(R.id.female_button) as TextView
 
         maleButton.setOnClickListener {
-            Patient.Sex = "male"
+            Patient.sex = "male"
         }
 
         femaleButton.setOnClickListener {
-            Patient.Sex = "female"
+            Patient.sex = "female"
         }
     }
 }

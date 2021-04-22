@@ -1,9 +1,26 @@
 package com.bignerdranch.android.covidapp
 
+import android.util.Log
 import android.widget.Button
 import androidx.lifecycle.ViewModel
+import com.google.gson.annotations.Expose
+import com.bignerdranch.android.covidapp.api.WebServiceApi
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 
-//need to now about the variables used by webservice team to create proper attributes.
+private const val TAG = "PATIENT"
+
+val retrofit: Retrofit = Retrofit.Builder()
+        .baseUrl("?")
+        .addConverterFactory(GsonConverterFactory.create())
+        .build()
+
+val webServiceApi: WebServiceApi = retrofit.create(WebServiceApi::class.java)
+
+//need to know about the variables used by webservice team to create proper attributes.
 
 object Patient {
 /*
@@ -21,32 +38,49 @@ fun main() {
 }
 
 */
-var id:Int = 0
-    var Age:String = ""
-    var Sex: String = ""
-    var Ethnicity: String = ""
-    var Asthma : Boolean = false
-    var Cardio : Boolean = false
-    var Lung : Boolean = false
-    var Immune : Boolean = false
-    var Metaba : Boolean = false
-    var Neuro : Boolean = false
-    var Other : Boolean = false
-    var Obesity : Boolean = false
-    var Pregnant : Boolean = false
-    var Renal : Boolean = false
-    var Gastro : Boolean = false
-    var Hyper : Boolean = false
-    var Auto: Boolean = false
+    @Expose
+    var id:Int = 0
+    @Expose
+    var age :String = ""
+    @Expose
+    var sex: String = ""
+    @Expose
+    var ethnicity: String = ""
+    @Expose
+    var asthma : Boolean = false
+    @Expose
+    var cardio : Boolean = false
+    @Expose
+    var lung: Boolean = false
+    @Expose
+    var immune: Boolean = false
+    @Expose
+    var metaba : Boolean = false
+    @Expose
+    var neuro : Boolean = false
+    @Expose
+    var other : Boolean = false
+    @Expose
+    var obesity : Boolean = false
+    @Expose
+    var pregnant : Boolean = false
+    @Expose
+    var renal : Boolean = false
+    @Expose
+    var gastro: Boolean = false
+    @Expose
+    var hyper : Boolean = false
+    @Expose
+    var auto: Boolean = false
 
 
     //getter functions --------------------------------------------------------------------------------
     fun get_age() : String{
-    return Age
+    return age
     }
 
     fun get_sex() : String{
-        return Sex
+        return sex
     }
 
     fun get_id() : Int{
@@ -54,59 +88,73 @@ var id:Int = 0
     }
 
     fun get_Ethnicity() : String{
-        return Ethnicity
+        return ethnicity
     }
 
     fun get_Asthma() : Boolean{
-        return Asthma
+        return asthma
     }
 
     fun get_Cardio() : Boolean{
-        return Cardio
+        return cardio
     }
 
     fun get_Lung() : Boolean{
-        return Lung
+        return lung
     }
 
     fun get_Immune() : Boolean{
-        return Immune
+        return immune
     }
 
     fun get_Metaba() : Boolean{
-        return Metaba
+        return metaba
     }
 
     fun get_Neuro() : Boolean{
-        return Neuro
+        return neuro
     }
 
     fun get_Other() : Boolean{
-        return Other
+        return other
     }
 
     fun get_Obesity() : Boolean{
-        return Obesity
+        return obesity
     }
 
     fun get_Pregnant() : Boolean{
-        return Pregnant
+        return pregnant
     }
 
     fun get_Renal() : Boolean{
-        return Renal
+        return renal
     }
 
     fun get_Gastro() : Boolean{
-        return Gastro
+        return gastro
     }
 
     fun get_Hyper() : Boolean{
-        return Hyper
+        return hyper
     }
     fun get_Autoimmune() : Boolean{
-        return Auto
+        return auto
     }
 //end of getter functions---------------------------------------------------------------------------
+
+    fun sendForm() {
+        webServiceApi.sendPatientForm(this).enqueue(object : Callback<Patient?> {
+            override fun onResponse(call: Call<Patient?>?, response: Response<Patient?>) {
+                if (response.isSuccessful) {
+                    Log.i(TAG, "post submitted to API." + response.body().toString())
+                }
+            }
+
+            override fun onFailure(call: Call<Patient?>?, t: Throwable?) {
+                Log.e(TAG, "Unable to submit post to API.")
+            }
+        })
+    }
 
 }//end of patient class

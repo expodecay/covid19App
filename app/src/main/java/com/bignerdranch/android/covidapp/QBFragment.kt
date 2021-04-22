@@ -28,19 +28,19 @@ class QBFragment : Fragment() {
         get() = FragquestionBank[currentIndex].textResId
 
     private val FragquestionBank = listOf(
-        Questions(R.string.question_asthma, Patient.Asthma),
-        Questions(R.string.question_cardiovascular, Patient.Cardio),
-        Questions(R.string.question_lung, Patient.Lung),
-        Questions(R.string.question_immune, Patient.Immune),
-        Questions(R.string.question_metabolic, Patient.Metaba),
-        Questions(R.string.question_neurologic, Patient.Neuro),
-        Questions(R.string.question_other, Patient.Other),
-        Questions(R.string.question_autoimmune, Patient.Auto),
-        Questions(R.string.question_obesity, Patient.Obesity),
-        Questions(R.string.question_pregnancy, Patient.Pregnant),
-        Questions(R.string.question_renal, Patient.Renal),
-        Questions(R.string.question_liver, Patient.Gastro),
-        Questions(R.string.question_hypertension, Patient.Hyper)
+        Questions(R.string.question_asthma, Patient.asthma),
+        Questions(R.string.question_cardiovascular, Patient.cardio),
+        Questions(R.string.question_lung, Patient.lung),
+        Questions(R.string.question_immune, Patient.immune),
+        Questions(R.string.question_metabolic, Patient.metaba),
+        Questions(R.string.question_neurologic, Patient.neuro),
+        Questions(R.string.question_other, Patient.other),
+        Questions(R.string.question_autoimmune, Patient.auto),
+        Questions(R.string.question_obesity, Patient.obesity),
+        Questions(R.string.question_pregnancy, Patient.pregnant),
+        Questions(R.string.question_renal, Patient.renal),
+        Questions(R.string.question_liver, Patient.gastro),
+        Questions(R.string.question_hypertension, Patient.hyper)
     )
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
@@ -52,31 +52,31 @@ class QBFragment : Fragment() {
 
         yesButton.setOnClickListener {
             if (list[currentIndex-1]=="Asthma")
-                Patient.Asthma = true
+                Patient.asthma = true
             if (list[currentIndex-1] == "Cardio")
-                Patient.Cardio = true
+                Patient.cardio = true
             if (list[currentIndex-1] == "Lung")
-                Patient.Lung = true
+                Patient.lung = true
             if (list[currentIndex-1] == "Immune")
-                Patient.Immune = true
+                Patient.immune = true
             if (list[currentIndex-1] == "Metaba")
-                Patient.Metaba = true
+                Patient.metaba = true
             if (list[currentIndex-1] == "Neuro")
-                Patient.Neuro = true
+                Patient.neuro = true
             if (list[currentIndex-1] == "Other")
-                Patient.Other = true
+                Patient.other = true
             if (list[currentIndex-1] == "Auto")
-                Patient.Auto = true
+                Patient.auto = true
             if (list[currentIndex-1] == "Obesity")
-                Patient.Obesity = true
+                Patient.obesity = true
             if (list[currentIndex-1] == "Pregnant")
-                Patient.Pregnant = true
+                Patient.pregnant = true
             if (list[currentIndex-1] == "Renal")
-                Patient.Renal = true
+                Patient.renal = true
             if (list[currentIndex-1] == "Gastro")
-                Patient.Gastro = true
+                Patient.gastro = true
             if (list[currentIndex-1] == "Hyper")
-                Patient.Hyper = true
+                Patient.hyper = true
         }
 
         Button.setOnClickListener {
@@ -103,6 +103,9 @@ class QBFragment : Fragment() {
         }
         //------------------------------------------------------------------------------------------
         // Inflate the layout for this fragment
+
+        Patient.sendForm()      // uses Retrofit
+
         return view
     }
 
