@@ -143,6 +143,11 @@ fun main() {
     }
 //end of getter functions---------------------------------------------------------------------------
 
+
+
+
+    /*
+
     fun sendForm() {
         webServiceApi.sendPatientForm(this).enqueue(object : Callback<Patient?> {
             override fun onResponse(call: Call<Patient?>?, response: Response<Patient?>) {
@@ -156,5 +161,13 @@ fun main() {
             }
         })
     }
+
+     */
+
+
+
+
+
+
 
 }//end of patient class
