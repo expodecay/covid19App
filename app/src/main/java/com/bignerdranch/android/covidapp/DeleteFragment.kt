@@ -25,9 +25,6 @@ class DeleteFragment : Fragment() {
                               savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_delete, container, false)
 
-
-
-
         val one = view.findViewById<TextView>(R.id.Age)
         val two = view.findViewById<TextView>(R.id.Sex)
         val three = view.findViewById<TextView>(R.id.Ethnicity)
@@ -44,27 +41,22 @@ class DeleteFragment : Fragment() {
         val fourteen = view.findViewById<TextView>(R.id.Gastro)
         val fifteen = view.findViewById<TextView>(R.id.Hyper)
         val sixteen = view.findViewById<TextView>(R.id.Auto)
-        one.setText(Patient.age.toString())
-        two.setText(Patient.sex.toString())
-        three.setText(Patient.ethnicity.toString())
-        four.setText(Patient.asthma.toString())
-        five.setText(Patient.cardio.toString())
-        six.setText(Patient.lung.toString())
-        seven.setText(Patient.immune.toString())
-        eight.setText(Patient.metaba.toString())
-        nine.setText(Patient.neuro.toString())
-        ten.setText(Patient.other.toString())
-        eleven.setText(Patient.obesity.toString())
-        twelve.setText(Patient.pregnant.toString())
-        thirteen.setText(Patient.renal.toString())
-        fourteen.setText(Patient.gastro.toString())
-        fifteen.setText(Patient.hyper.toString())
-        sixteen.setText(Patient.auto.toString())
-
-
-
-
-
+        one.setText("Age: " + Patient.age.toString())
+        two.setText("Sex: " + Patient.sex.toString())
+        three.setText("Ethnicity: " +Patient.ethnicity.toString())
+        four.setText("Asthma: " + Patient.asthma.toString())
+        five.setText("Cardio: " +Patient.cardio.toString())
+        six.setText("Lung: " +Patient.lung.toString())
+        seven.setText("Immune: " +Patient.immune.toString())
+        eight.setText("Metaba: " +Patient.metaba.toString())
+        nine.setText("Neuro: " +Patient.neuro.toString())
+        ten.setText("Other: " +Patient.other.toString())
+        eleven.setText("Obesity: " +Patient.obesity.toString())
+        twelve.setText("Pregnant: " +Patient.pregnant.toString())
+        thirteen.setText("Renal: " +Patient.renal.toString())
+        fourteen.setText("Gastro: " +Patient.gastro.toString())
+        fifteen.setText("Hyper: " +Patient.hyper.toString())
+        sixteen.setText("Auto: " +Patient.auto.toString())
 
         // Inflate the layout for this fragment
         return view
