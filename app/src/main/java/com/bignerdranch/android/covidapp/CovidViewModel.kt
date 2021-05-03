@@ -10,22 +10,22 @@ class CovidViewModel : ViewModel() {
        // Questions(R.string.question_age, false),
        // Questions(R.string.question_gender, false),
        // Questions(R.string.question_ethnicity, false),
-        Questions(R.string.question_asthma, false),
-        Questions(R.string.question_cardiovascular, false),
-        Questions(R.string.question_lung, false),
-        Questions(R.string.question_immune, false),
-        Questions(R.string.question_metabolic, false),
-        Questions(R.string.question_neurologic, false),
-        Questions(R.string.question_other, false),
-        Questions(R.string.question_autoimmune, false),
-        Questions(R.string.question_obesity, false),
-        Questions(R.string.question_pregnancy, false),
-        Questions(R.string.question_renal, false),
-        Questions(R.string.question_liver, false),
-        Questions(R.string.question_hypertension, false)
+        Questions(R.string.question_asthma, 2),
+        Questions(R.string.question_cardiovascular, 2),
+        Questions(R.string.question_lung, 2),
+        Questions(R.string.question_immune, 2),
+        Questions(R.string.question_metabolic, 2),
+        Questions(R.string.question_neurologic, 2),
+        Questions(R.string.question_other, 2),
+        Questions(R.string.question_autoimmune, 2),
+        Questions(R.string.question_obesity, 2),
+        Questions(R.string.question_pregnancy, 2),
+        Questions(R.string.question_renal, 2),
+        Questions(R.string.question_liver, 2),
+        Questions(R.string.question_hypertension, 2)
     )
 
-    val currentQuestionAnswer: Boolean
+    val currentQuestionAnswer: Int
         get() = questionBank[currentIndex].answer
 
     val currentQuestionText: Int

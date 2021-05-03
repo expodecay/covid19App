@@ -17,7 +17,7 @@ import android.widget.TextView
 class AgeFragment: Fragment()  {
 
     lateinit var editText: EditText
-    lateinit var input :String
+     var input :Int = 0
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
@@ -27,7 +27,7 @@ class AgeFragment: Fragment()  {
         Button.setOnClickListener {
 
             editText = view.findViewById<EditText>(R.id.editTextNumber2)
-            input = editText.text.toString()
+            input = Integer.parseInt(editText.getText().toString())
             Patient.age = input
 
             // get the fragment instance

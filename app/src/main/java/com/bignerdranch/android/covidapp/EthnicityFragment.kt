@@ -36,7 +36,7 @@ class EthnicityFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+/*
         val updatetext = view?.findViewById<TextView>(R.id.ethnicityTitle)
 
         val americanIndian = view.findViewById<CheckBox>(R.id.American_Indian)
@@ -69,5 +69,7 @@ class EthnicityFragment : Fragment() {
             Patient.ethnicity = white.text.toString()
             updatetext.setText(Patient.ethnicity)
         }
+
+ */
     }
 }

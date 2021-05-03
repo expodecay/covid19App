@@ -24,7 +24,7 @@ class GenderFragment : Fragment() {
 
         val Button = view?.findViewById<Button>(R.id.gender_next_button) as TextView
         Button.setOnClickListener {
-            val nextFragment = EthnicityFragment()
+            val nextFragment = QBFragment()
             val manager = (context as MainActivity).supportFragmentManager
             val transaction = manager.beginTransaction()
             transaction.replace(R.id.frameLayout, nextFragment)
@@ -41,11 +41,11 @@ class GenderFragment : Fragment() {
         val femaleButton = view.findViewById<Button>(R.id.female_button) as TextView
 
         maleButton.setOnClickListener {
-            Patient.sex = "male"
+            Patient.sex = 1
         }
 
         femaleButton.setOnClickListener {
-            Patient.sex = "female"
+            Patient.sex = 2
         }
     }
 }

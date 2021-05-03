@@ -52,31 +52,31 @@ class QBFragment : Fragment() {
 
         yesButton.setOnClickListener {
             if (list[currentIndex-1]=="Asthma")
-                Patient.asthma = true
+                Patient.asthma = 1
             if (list[currentIndex-1] == "Cardio")
-                Patient.cardio = true
+                Patient.cardio = 1
             if (list[currentIndex-1] == "Lung")
-                Patient.lung = true
+                Patient.lung = 1
             if (list[currentIndex-1] == "Immune")
-                Patient.immune = true
+                Patient.immune = 1
             if (list[currentIndex-1] == "Metaba")
-                Patient.metaba = true
+                Patient.metaba = 1
             if (list[currentIndex-1] == "Neuro")
-                Patient.neuro = true
+                Patient.neuro = 1
             if (list[currentIndex-1] == "Other")
-                Patient.other = true
+                Patient.other = 1
             if (list[currentIndex-1] == "Auto")
-                Patient.auto = true
+                Patient.auto = 1
             if (list[currentIndex-1] == "Obesity")
-                Patient.obesity = true
+                Patient.obesity = 1
             if (list[currentIndex-1] == "Pregnant")
-                Patient.pregnant = true
+                Patient.pregnant = 1
             if (list[currentIndex-1] == "Renal")
-                Patient.renal = true
+                Patient.renal = 1
             if (list[currentIndex-1] == "Gastro")
-                Patient.gastro = true
+                Patient.gastro = 1
             if (list[currentIndex-1] == "Hyper")
-                Patient.hyper = true
+                Patient.hyper = 1
         }
 
         Button.setOnClickListener {
@@ -104,7 +104,7 @@ class QBFragment : Fragment() {
         //------------------------------------------------------------------------------------------
         // Inflate the layout for this fragment
 
-        Patient.sendForm()      // uses Retrofit
+      //  Patient.sendForm()      // uses Retrofit
 
         return view
     }

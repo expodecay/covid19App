@@ -41,45 +41,45 @@ fun main() {
     @Expose
     var id:Int = 0
     @Expose
-    var age :String = ""
+    var age: Int = 2
     @Expose
-    var sex: String = ""
+    var sex: Int = 2
     @Expose
-    var ethnicity: String = ""
+    var ethnicity: Int = 2
     @Expose
-    var asthma : Boolean = false
+    var asthma : Int = 2
     @Expose
-    var cardio : Boolean = false
+    var cardio : Int = 2
     @Expose
-    var lung: Boolean = false
+    var lung: Int = 2
     @Expose
-    var immune: Boolean = false
+    var immune: Int = 2
     @Expose
-    var metaba : Boolean = false
+    var metaba : Int = 2
     @Expose
-    var neuro : Boolean = false
+    var neuro : Int = 2
     @Expose
-    var other : Boolean = false
+    var other : Int = 2
     @Expose
-    var obesity : Boolean = false
+    var obesity : Int = 2
     @Expose
-    var pregnant : Boolean = false
+    var pregnant : Int = 2
     @Expose
-    var renal : Boolean = false
+    var renal : Int = 2
     @Expose
-    var gastro: Boolean = false
+    var gastro: Int = 2
     @Expose
-    var hyper : Boolean = false
+    var hyper : Int = 2
     @Expose
-    var auto: Boolean = false
+    var auto: Int = 2
 
 
     //getter functions --------------------------------------------------------------------------------
-    fun get_age() : String{
+    fun get_age() : Int{
     return age
     }
 
-    fun get_sex() : String{
+    fun get_sex() : Int{
         return sex
     }
 
@@ -87,58 +87,58 @@ fun main() {
         return id
     }
 
-    fun get_Ethnicity() : String{
+    fun get_Ethnicity() : Int{
         return ethnicity
     }
 
-    fun get_Asthma() : Boolean{
+    fun get_Asthma() : Int{
         return asthma
     }
 
-    fun get_Cardio() : Boolean{
+    fun get_Cardio() : Int{
         return cardio
     }
 
-    fun get_Lung() : Boolean{
+    fun get_Lung() : Int{
         return lung
     }
 
-    fun get_Immune() : Boolean{
+    fun get_Immune() : Int{
         return immune
     }
 
-    fun get_Metaba() : Boolean{
+    fun get_Metaba() : Int{
         return metaba
     }
 
-    fun get_Neuro() : Boolean{
+    fun get_Neuro() : Int{
         return neuro
     }
 
-    fun get_Other() : Boolean{
+    fun get_Other() : Int{
         return other
     }
 
-    fun get_Obesity() : Boolean{
+    fun get_Obesity() : Int{
         return obesity
     }
 
-    fun get_Pregnant() : Boolean{
+    fun get_Pregnant() : Int{
         return pregnant
     }
 
-    fun get_Renal() : Boolean{
+    fun get_Renal() : Int{
         return renal
     }
 
-    fun get_Gastro() : Boolean{
+    fun get_Gastro() : Int{
         return gastro
     }
 
-    fun get_Hyper() : Boolean{
+    fun get_Hyper() : Int{
         return hyper
     }
-    fun get_Autoimmune() : Boolean{
+    fun get_Autoimmune() : Int{
         return auto
     }
 //end of getter functions---------------------------------------------------------------------------
