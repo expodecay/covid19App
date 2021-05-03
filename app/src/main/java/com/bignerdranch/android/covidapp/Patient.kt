@@ -38,53 +38,48 @@ fun main() {
 }
 
 */
-    @Expose
-    var id:Int = 0
-    @Expose
-    var age: Int = 2
-    @Expose
-    var sex: Int = 2
-    @Expose
+    var sex:Int             = 2
+    var patient_type:Int    = 1
+    var intubed:Int         = 2
+    var pneumonia:Int       = 2
+    var age:Int             = 15
+    var pregnancy :Int      = 2
+    var diabetes:Int        = 2
+    var copd:Int            = 2
+    var asthma:Int          = 2
+    var inmsupr:Int         = 2
+    var hypertension:Int    = 2
+    var other_disease:Int   = 2
+    var cardiovascular:Int  = 2
+    var obesity:Int         = 2
+    var renal_chronic:Int   = 2
+    var tobacco:Int         = 2
+    var contact_other_covid = 2
+    var icu                 = 2
+
+
+
     var ethnicity: Int = 2
-    @Expose
-    var asthma : Int = 2
-    @Expose
-    var cardio : Int = 2
-    @Expose
-    var lung: Int = 2
-    @Expose
-    var immune: Int = 2
-    @Expose
-    var metaba : Int = 2
-    @Expose
-    var neuro : Int = 2
-    @Expose
-    var other : Int = 2
-    @Expose
-    var obesity : Int = 2
-    @Expose
-    var pregnant : Int = 2
-    @Expose
-    var renal : Int = 2
-    @Expose
-    var gastro: Int = 2
-    @Expose
-    var hyper : Int = 2
-    @Expose
-    var auto: Int = 2
 
 
     //getter functions --------------------------------------------------------------------------------
+    fun get_patient_type() : Int{
+        return patient_type
+    }
+    fun get_intubed() : Int{
+        return intubed
+    }
+
     fun get_age() : Int{
-    return age
+        return age
+    }
+
+    fun get_pneumonia() : Int{
+        return pneumonia
     }
 
     fun get_sex() : Int{
         return sex
-    }
-
-    fun get_id() : Int{
-        return id
     }
 
     fun get_Ethnicity() : Int{
@@ -95,52 +90,58 @@ fun main() {
         return asthma
     }
 
-    fun get_Cardio() : Int{
-        return cardio
+    fun get_diabetes() : Int{
+        return diabetes
     }
 
-    fun get_Lung() : Int{
-        return lung
+    fun get_copd() : Int{
+        return copd
     }
 
-    fun get_Immune() : Int{
-        return immune
+    fun get_cardiovascular() : Int{
+        return cardiovascular
     }
 
-    fun get_Metaba() : Int{
-        return metaba
+    fun get_inmsupr() : Int{
+        return inmsupr
     }
 
-    fun get_Neuro() : Int{
-        return neuro
+    fun get_tobacco() : Int{
+        return tobacco
     }
 
-    fun get_Other() : Int{
-        return other
+    fun get_contact_other_covid() : Int{
+        return contact_other_covid
+    }
+
+    fun get_icu() : Int{
+        return icu
+    }
+
+
+
+    fun get_other_disease() : Int{
+        return other_disease
     }
 
     fun get_Obesity() : Int{
         return obesity
     }
 
-    fun get_Pregnant() : Int{
-        return pregnant
+    fun get_pregnancy() : Int{
+        return pregnancy
     }
 
-    fun get_Renal() : Int{
-        return renal
+    fun get_renal_chronic() : Int{
+        return renal_chronic
     }
 
-    fun get_Gastro() : Int{
-        return gastro
+
+
+    fun get_hypertension() : Int{
+        return hypertension
     }
 
-    fun get_Hyper() : Int{
-        return hyper
-    }
-    fun get_Autoimmune() : Int{
-        return auto
-    }
 //end of getter functions---------------------------------------------------------------------------
 
 

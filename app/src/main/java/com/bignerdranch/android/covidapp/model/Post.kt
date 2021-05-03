@@ -2,10 +2,13 @@ package com.bignerdranch.android.covidapp.model
 
 data class Post (
         val sex:Int,
+
         val patient_type:Int,
         val intubed:Int,
         val pneumonia:Int,
+
         val age:Int,
+
         val pregnancy:Int,
         val diabetes:Int,
         val copd:Int,

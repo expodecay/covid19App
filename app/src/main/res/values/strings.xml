@@ -2,22 +2,31 @@
     <string name="app_name">Covid19App</string>
 
     <!-- QuestionBank -->
-    <string name="question_age">What is your age?</string>
-    <string name="question_gender">What is your gender?</string>
     <string name="question_ethnicity">What is your ethnicity?</string>
+
+
+    <string name="question_gender">What is your gender?</string>
+    <string name="question_patient_type">Are you an inpatient? </string>
+    <string name="question_intubed">Do you require intubation? </string>
+    <string name="question_pneumonia">Do you have pneumonia? </string>
+    <string name="question_age">What is your age?</string>
+    <string name="question_pregnancy">Are you pregnant?</string>
+    <string name="question_diabetes">Do you have diabetes? </string>
+    <string name="question_copd">Do you have COPD? </string>
     <string name="question_asthma">Do you have Asthma?</string>
-    <string name="question_cardiovascular">Do you have Cardiovascular disease?</string>
-    <string name="question_lung">Do you have Chronic lung disease?</string>
     <string name="question_immune">Do you have an Immune suppression?</string>
-    <string name="question_metabolic">Do you have any Metabolic disease?</string>
-    <string name="question_neurologic">Do you have any Neurological disease?</string>
-    <string name="question_autoimmune">Do you have an Autoimmune disease ?</string>
-    <string name="question_obesity">Do you have Obesity?</string>
-    <string name="question_pregnancy">Are you pregnant? (limit to female:true)</string>
-    <string name="question_renal">Do you have Renal disease?</string>
-    <string name="question_liver">Do you have Gastrointestinal/liver disease?</string>
     <string name="question_hypertension">Do you have Hypertension?</string>
     <string name="question_other">Do you have any Other disease?</string>
+    <string name="question_cardiovascular">Do you have Cardiovascular disease?</string>
+    <string name="question_obesity">Do you have Obesity?</string>
+    <string name="question_renal">Do you have Renal disease?</string>
+    <string name="question_tobacco">Do you smoke tobacco?</string>
+    <string name="question_contact">Have you had contact with covid19?</string>
+    <string name="question_icu">Have you been admitted to the ICU?</string>
+
+
+
+
 
     <!-- Buttons -->
     <string name="yes_button">Yes</string>

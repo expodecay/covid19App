@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModel
 private const val TAG = "CovidViewModel"
 class CovidViewModel : ViewModel() {
     var currentIndex = 0
+    /*
     private val questionBank = listOf(
        // Questions(R.string.question_age, false),
        // Questions(R.string.question_gender, false),
@@ -25,6 +26,8 @@ class CovidViewModel : ViewModel() {
         Questions(R.string.question_hypertension, 2)
     )
 
+
+
     val currentQuestionAnswer: Int
         get() = questionBank[currentIndex].answer
 
@@ -41,4 +44,6 @@ class CovidViewModel : ViewModel() {
             currentIndex = currentIndex + 1
         }
     }
+
+     */
 }

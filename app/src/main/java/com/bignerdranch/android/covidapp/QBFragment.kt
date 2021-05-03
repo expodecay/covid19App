@@ -22,25 +22,28 @@ import androidx.lifecycle.ViewModel
 class QBFragment : Fragment() {
     private  var questionTextView =view?.findViewById<TextView>(R.id.question_text_view)
     var currentIndex = 1
-    val list = arrayListOf<String>("Asthma","Cardio" , "Lung", "Immune", "Metaba", "Neuro", "Other",
-    "Auto", "Obesity", "Pregnant", "Renal", "Gastro", "Hyper")
+    val list = arrayListOf<String>("patient_type","intubed" , "pneumonia", "pregnancy", "diabetes", "copd", "asthma",
+    "inmsupr", "hypertension", "other_disease", "cardiovascular", "obesity", "renal_chronic", "tobacco", "contact_other_covid", "icu")
     val fragcurrentQuestionText: Int
         get() = FragquestionBank[currentIndex].textResId
 
     private val FragquestionBank = listOf(
+        Questions(R.string.question_patient_type, Patient.patient_type),
+        Questions(R.string.question_intubed, Patient.intubed),
+        Questions(R.string.question_pneumonia, Patient.pneumonia),
+        Questions(R.string.question_pregnancy, Patient.pregnancy),
+        Questions(R.string.question_diabetes, Patient.diabetes),
+        Questions(R.string.question_copd, Patient.copd),
         Questions(R.string.question_asthma, Patient.asthma),
-        Questions(R.string.question_cardiovascular, Patient.cardio),
-        Questions(R.string.question_lung, Patient.lung),
-        Questions(R.string.question_immune, Patient.immune),
-        Questions(R.string.question_metabolic, Patient.metaba),
-        Questions(R.string.question_neurologic, Patient.neuro),
-        Questions(R.string.question_other, Patient.other),
-        Questions(R.string.question_autoimmune, Patient.auto),
+        Questions(R.string.question_immune, Patient.inmsupr),
+        Questions(R.string.question_hypertension, Patient.hypertension),
+        Questions(R.string.question_other, Patient.other_disease),
+        Questions(R.string.question_cardiovascular, Patient.cardiovascular),
         Questions(R.string.question_obesity, Patient.obesity),
-        Questions(R.string.question_pregnancy, Patient.pregnant),
-        Questions(R.string.question_renal, Patient.renal),
-        Questions(R.string.question_liver, Patient.gastro),
-        Questions(R.string.question_hypertension, Patient.hyper)
+        Questions(R.string.question_renal, Patient.renal_chronic),
+        Questions(R.string.question_tobacco, Patient.tobacco),
+        Questions(R.string.question_contact, Patient.contact_other_covid),
+        Questions(R.string.question_icu, Patient.icu)
     )
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
@@ -51,32 +54,38 @@ class QBFragment : Fragment() {
         val Button = view?.findViewById<Button>(R.id.qb_next_button) as TextView
 
         yesButton.setOnClickListener {
-            if (list[currentIndex-1]=="Asthma")
+            if (list[currentIndex-1]=="patient_type")
+                Patient.patient_type = 1
+            if (list[currentIndex-1] == "intubed")
+                Patient.intubed = 1
+            if (list[currentIndex-1] == "pneumonia")
+                Patient.pneumonia = 1
+            if (list[currentIndex-1] == "pregnancy")
+                Patient.pregnancy = 1
+            if (list[currentIndex-1] == "diabetes")
+                Patient.diabetes = 1
+            if (list[currentIndex-1] == "copd")
+                Patient.copd = 1
+            if (list[currentIndex-1] == "asthma")
                 Patient.asthma = 1
-            if (list[currentIndex-1] == "Cardio")
-                Patient.cardio = 1
-            if (list[currentIndex-1] == "Lung")
-                Patient.lung = 1
-            if (list[currentIndex-1] == "Immune")
-                Patient.immune = 1
-            if (list[currentIndex-1] == "Metaba")
-                Patient.metaba = 1
-            if (list[currentIndex-1] == "Neuro")
-                Patient.neuro = 1
-            if (list[currentIndex-1] == "Other")
-                Patient.other = 1
-            if (list[currentIndex-1] == "Auto")
-                Patient.auto = 1
-            if (list[currentIndex-1] == "Obesity")
+            if (list[currentIndex-1] == "inmsupr")
+                Patient.inmsupr = 1
+            if (list[currentIndex-1] == "hypertension")
+                Patient.hypertension = 1
+            if (list[currentIndex-1] == "other_disease")
+                Patient.other_disease = 1
+            if (list[currentIndex-1] == "cardiovascular")
+                Patient.cardiovascular = 1
+            if (list[currentIndex-1] == "obesity")
                 Patient.obesity = 1
-            if (list[currentIndex-1] == "Pregnant")
-                Patient.pregnant = 1
-            if (list[currentIndex-1] == "Renal")
-                Patient.renal = 1
-            if (list[currentIndex-1] == "Gastro")
-                Patient.gastro = 1
-            if (list[currentIndex-1] == "Hyper")
-                Patient.hyper = 1
+            if (list[currentIndex-1] == "renal_chronic")
+                Patient.renal_chronic = 1
+            if (list[currentIndex-1] == "tobacco")
+                Patient.tobacco = 1
+            if (list[currentIndex-1] == "contact_other_covid")
+                Patient.contact_other_covid = 1
+            if (list[currentIndex-1] == "icu")
+                Patient.icu = 1
         }
 
         Button.setOnClickListener {

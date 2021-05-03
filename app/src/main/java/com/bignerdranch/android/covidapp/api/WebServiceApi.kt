@@ -19,4 +19,14 @@ interface WebServiceApi {
      */
     @GET("Production/patient")
     suspend fun getPost(): Response<Post>
+
+    @POST("Production/patient")
+    suspend fun pushPost(
+        @Body post: Post
+    ): Response<Post>
+
+    @POST("posts")
+    suspend fun pushPostTest(
+        @Body post: Post
+    ): Response<Post>
 }
