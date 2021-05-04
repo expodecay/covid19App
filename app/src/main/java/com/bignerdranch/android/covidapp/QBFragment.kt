@@ -51,7 +51,7 @@ class QBFragment : Fragment() {
 
         yesButton.setOnClickListener {
             if (list[currentIndex-1]=="patient_type")
-                Patient.patient_type = 1
+                Patient.patient_type = 2
             if (list[currentIndex-1] == "intubed")
                 Patient.intubed = 1
             if (list[currentIndex-1] == "pneumonia")

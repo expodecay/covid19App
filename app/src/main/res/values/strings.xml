@@ -6,7 +6,7 @@
 
 
     <string name="question_gender">What is your gender?</string>
-    <string name="question_patient_type">Are you an outpatient? </string>
+    <string name="question_patient_type">Are you an inpatient? </string>
     <string name="question_intubed">Do you require intubation? </string>
     <string name="question_pneumonia">Do you have pneumonia? </string>
     <string name="question_age">What is your age?</string>

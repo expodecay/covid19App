@@ -39,7 +39,7 @@ fun main() {
 
 */
     var sex:Int             = 2
-    var patient_type:Int    = 2
+    var patient_type:Int    = 1
     var intubed:Int         = 2
     var pneumonia:Int       = 2
     var age:Int             = 15
