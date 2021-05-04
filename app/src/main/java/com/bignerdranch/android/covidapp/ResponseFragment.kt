@@ -77,7 +77,7 @@ class ResponseFragment : Fragment() {
         val viewModelFactory = MainViewModelFactory(repository)
         viewModel = ViewModelProvider(this, viewModelFactory).get(MainViewModel::class.java)
 
-        val myPost = Post(Patient.get_sex(), Patient.patient_type, Patient.get_intubed(), Patient.get_pneumonia(), Patient.get_age(), Patient.get_pregnancy(),
+        val myPost = Post(Patient.get_sex(), Patient.get_patient_type(), Patient.get_intubed(), Patient.get_pneumonia(), Patient.get_age(), Patient.get_pregnancy(),
             Patient.get_diabetes(), Patient.get_copd(), Patient.get_Asthma(), Patient.get_inmsupr(), Patient.get_hypertension(), Patient.get_other_disease(), Patient.get_cardiovascular(),
             Patient.get_Obesity(), Patient.get_renal_chronic(), Patient.get_tobacco(), Patient.get_contact_other_covid(), Patient.get_icu() )
         viewModel.pushPost(myPost)
