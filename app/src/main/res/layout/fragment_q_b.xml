@@ -36,7 +36,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
-        android:text="QBank next"
+        android:text="Next"
         android:drawableEnd="@drawable/arrow_right"
         android:drawablePadding="4dp"/>
 
@@ -44,6 +44,6 @@
         android:id="@+id/showInput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Show Input"
+        android:text="Show Results"
         android:layout_gravity="bottom"/>
 </FrameLayout>
