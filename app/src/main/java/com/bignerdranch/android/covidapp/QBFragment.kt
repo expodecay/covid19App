@@ -7,10 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
-import android.widget.Toast
-
-import androidx.lifecycle.ViewModelProviders
-import androidx.lifecycle.ViewModel
 
 
 /**
@@ -100,7 +96,7 @@ class QBFragment : Fragment() {
         val lastButton = view?.findViewById<Button>(R.id.showInput) as TextView
         lastButton.setOnClickListener {
             // get the fragment instance
-            val nextFragment = DeleteFragment()
+            val nextFragment = ResponseFragment()
             // get the support fragment manager instance
             val manager = (context as MainActivity).supportFragmentManager
             // begin fragment transaction using fragment manager

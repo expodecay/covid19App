@@ -6,7 +6,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.TextView
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -16,16 +15,16 @@ import com.bignerdranch.android.covidapp.repository.Repository
 
 /**
  * A simple [Fragment] subclass.
- * Use the [DeleteFragment.newInstance] factory method to
+ * Use the [ResponseFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class DeleteFragment : Fragment() {
+class ResponseFragment : Fragment() {
 
     private lateinit var viewModel: MainViewModel
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        val view = inflater.inflate(R.layout.fragment_delete, container, false)
+        val view = inflater.inflate(R.layout.fragment_response, container, false)
 
         val one = view.findViewById<TextView>(R.id.sex)
         val two = view.findViewById<TextView>(R.id.patient_type)
