@@ -25,7 +25,7 @@ interface WebServiceApi {
         @Body post: Post
     ): Response<Post>
 
-    @POST("posts")
+    @POST("/")
     suspend fun pushPostTest(
         @Body post: Post
     ): Response<Post>
