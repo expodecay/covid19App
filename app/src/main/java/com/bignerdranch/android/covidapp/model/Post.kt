@@ -9,6 +9,9 @@ data class Post (
 
         val age:Int,
 
+        val id:Int,
+       // val message: String,
+
         val pregnancy:Int,
         val diabetes:Int,
         val copd:Int,

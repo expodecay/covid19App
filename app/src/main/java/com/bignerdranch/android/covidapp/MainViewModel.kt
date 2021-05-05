@@ -20,16 +20,16 @@ class MainViewModel(private val repository: Repository): ViewModel() {
         }
     }
 
-    fun pushPost(post: Post){
+    fun AWS(post: Post){
         viewModelScope.launch {
-            val response = repository.pushPost(post)
+            val response = repository.AWS(post)
             myResponse.value = response
         }
     }
 
-    fun pushPostTest(post: Post){
+    fun Heroku(post: Post){
         viewModelScope.launch {
-            val response = repository.pushPostTest(post)
+            val response = repository.Heroku(post)
             myResponse.value = response
         }
     }

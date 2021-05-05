@@ -21,12 +21,12 @@ interface WebServiceApi {
     suspend fun getPost(): Response<Post>
 
     @POST("Production/patient")
-    suspend fun pushPost(
+    suspend fun AWS(
         @Body post: Post
     ): Response<Post>
 
     @POST("/")
-    suspend fun pushPostTest(
+    suspend fun Heroku(
         @Body post: Post
     ): Response<Post>
 }

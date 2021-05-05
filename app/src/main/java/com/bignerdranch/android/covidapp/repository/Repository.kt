@@ -10,11 +10,11 @@ class Repository {
         return RetrofitInstance.api.getPost()
     }
 
-    suspend fun pushPost(post: Post): Response<Post>{
-        return RetrofitInstance.api.pushPost(post)
+    suspend fun AWS(post: Post): Response<Post>{
+        return RetrofitInstance.api.AWS(post)
     }
 
-    suspend fun pushPostTest(post: Post): Response<Post>{
-        return RetrofitInstance.api.pushPostTest(post)
+    suspend fun Heroku(post: Post): Response<Post>{
+        return RetrofitInstance.api.Heroku(post)
     }
 }
