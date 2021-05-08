@@ -11,7 +11,7 @@ import kotlinx.coroutines.launch
 
 class MainViewModel(private val repository: Repository): ViewModel() {
 
-    val myResponse: MutableLiveData<Response<Post>> = MutableLiveData()
+    val myResponse: MutableLiveData<Response<Number>> = MutableLiveData()
 
     fun getPost(){
         viewModelScope.launch {

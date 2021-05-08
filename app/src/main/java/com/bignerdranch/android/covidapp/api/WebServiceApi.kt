@@ -4,10 +4,7 @@ import com.bignerdranch.android.covidapp.Patient
 import com.bignerdranch.android.covidapp.model.Post
 import retrofit2.Call
 import retrofit2.Response
-import retrofit2.http.Body
-import retrofit2.http.FormUrlEncoded
-import retrofit2.http.GET
-import retrofit2.http.POST
+import retrofit2.http.*
 
 interface WebServiceApi {
     /*
@@ -17,15 +14,15 @@ interface WebServiceApi {
 
      */
     @GET("Production/patient")
-    suspend fun getPost(): Response<Post>
+    suspend fun getPost(): Response<Number>
 
     @POST("Production/patient")
     suspend fun AWS(
         @Body post: Post
-    ): Response<Post>
+    ): Response<Number>
 
     @POST("/")
     suspend fun Heroku(
         @Body post: Post
-    ): Response<Post>
+    ): Response<Number>
 }
