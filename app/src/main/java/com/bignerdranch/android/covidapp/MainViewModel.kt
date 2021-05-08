@@ -11,7 +11,9 @@ import kotlinx.coroutines.launch
 
 class MainViewModel(private val repository: Repository): ViewModel() {
 
-    val myResponse: MutableLiveData<Response<Number>> = MutableLiveData()
+    val myResponse: MutableLiveData<Response<Post>> = MutableLiveData()
+    val HerokuResponse: MutableLiveData<Response<Post>> = MutableLiveData()
+    val AWSResponse: MutableLiveData<Response<Number>> = MutableLiveData()
 
     fun getPost(){
         viewModelScope.launch {
@@ -23,14 +25,14 @@ class MainViewModel(private val repository: Repository): ViewModel() {
     fun AWS(post: Post){
         viewModelScope.launch {
             val response = repository.AWS(post)
-            myResponse.value = response
+            AWSResponse.value = response
         }
     }
 
     fun Heroku(post: Post){
         viewModelScope.launch {
             val response = repository.Heroku(post)
-            myResponse.value = response
+            HerokuResponse.value = response
         }
     }
 }

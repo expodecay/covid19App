@@ -11,17 +11,6 @@ import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-private const val TAG = "PATIENT"
-
-val retrofit: Retrofit = Retrofit.Builder()
-        .baseUrl("?")
-        .addConverterFactory(GsonConverterFactory.create())
-        .build()
-
-val webServiceApi: WebServiceApi = retrofit.create(WebServiceApi::class.java)
-
-//need to know about the variables used by webservice team to create proper attributes.
-
 object Patient {
 /*
     companion object {
@@ -59,7 +48,6 @@ fun main() {
 
 
 
-    var ethnicity: Int = 2
 
 
     //getter functions --------------------------------------------------------------------------------
@@ -80,10 +68,6 @@ fun main() {
 
     fun get_sex() : Int{
         return sex
-    }
-
-    fun get_Ethnicity() : Int{
-        return ethnicity
     }
 
     fun get_Asthma() : Int{
@@ -118,8 +102,6 @@ fun main() {
         return icu
     }
 
-
-
     fun get_other_disease() : Int{
         return other_disease
     }
@@ -143,32 +125,5 @@ fun main() {
     }
 
 //end of getter functions---------------------------------------------------------------------------
-
-
-
-
-    /*
-
-    fun sendForm() {
-        webServiceApi.sendPatientForm(this).enqueue(object : Callback<Patient?> {
-            override fun onResponse(call: Call<Patient?>?, response: Response<Patient?>) {
-                if (response.isSuccessful) {
-                    Log.i(TAG, "post submitted to API." + response.body().toString())
-                }
-            }
-
-            override fun onFailure(call: Call<Patient?>?, t: Throwable?) {
-                Log.e(TAG, "Unable to submit post to API.")
-            }
-        })
-    }
-
-     */
-
-
-
-
-
-
 
 }//end of patient class

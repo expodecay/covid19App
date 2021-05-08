@@ -47,6 +47,7 @@ class QBFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_q_b, container, false)
 
         val yesButton = view?.findViewById<Button>(R.id.yes_button) as TextView
+        val noButton = view?.findViewById<Button>(R.id.no_button) as TextView
         val Button = view?.findViewById<Button>(R.id.qb_next_button) as TextView
 
         yesButton.setOnClickListener {
@@ -83,6 +84,40 @@ class QBFragment : Fragment() {
             if (list[currentIndex-1] == "icu")
                 Patient.icu = 1
         }
+        noButton.setOnClickListener {
+            if (list[currentIndex-1]=="patient_type")
+                Patient.patient_type = 1
+            if (list[currentIndex-1] == "intubed")
+                Patient.intubed = 2
+            if (list[currentIndex-1] == "pneumonia")
+                Patient.pneumonia = 2
+            if (list[currentIndex-1] == "pregnancy")
+                Patient.pregnancy = 2
+            if (list[currentIndex-1] == "diabetes")
+                Patient.diabetes = 2
+            if (list[currentIndex-1] == "copd")
+                Patient.copd = 2
+            if (list[currentIndex-1] == "asthma")
+                Patient.asthma = 2
+            if (list[currentIndex-1] == "inmsupr")
+                Patient.inmsupr = 2
+            if (list[currentIndex-1] == "hypertension")
+                Patient.hypertension = 2
+            if (list[currentIndex-1] == "other_disease")
+                Patient.other_disease = 2
+            if (list[currentIndex-1] == "cardiovascular")
+                Patient.cardiovascular = 2
+            if (list[currentIndex-1] == "obesity")
+                Patient.obesity = 1
+            if (list[currentIndex-1] == "renal_chronic")
+                Patient.renal_chronic = 2
+            if (list[currentIndex-1] == "tobacco")
+                Patient.tobacco = 2
+            if (list[currentIndex-1] == "contact_other_covid")
+                Patient.contact_other_covid = 2
+            if (list[currentIndex-1] == "icu")
+                Patient.icu = 2
+        }
 
         Button.setOnClickListener {
             val testText = view?.findViewById<TextView>(R.id.question_text_view)
@@ -92,7 +127,6 @@ class QBFragment : Fragment() {
             updateQuestion()
         }
 
-        // Delete this------------------------------------------------------------------------------
         val lastButton = view?.findViewById<Button>(R.id.showInput) as TextView
         lastButton.setOnClickListener {
             // get the fragment instance
@@ -108,9 +142,6 @@ class QBFragment : Fragment() {
         }
         //------------------------------------------------------------------------------------------
         // Inflate the layout for this fragment
-
-      //  Patient.sendForm()      // uses Retrofit
-
         return view
     }
 

@@ -86,7 +86,7 @@ class ResponseFragment : Fragment() {
 
         viewModel.AWS(myPost)
         //viewModel.getPost()
-        viewModel.myResponse.observe(viewLifecycleOwner, Observer{response ->
+        viewModel.AWSResponse.observe(viewLifecycleOwner, Observer{response ->
             if(response.isSuccessful){
                 Log.d("Main: ", response.body().toString())
                 // 201: request success -> resource created
@@ -94,8 +94,13 @@ class ResponseFragment : Fragment() {
                 Log.d("Main: ", response.toString())
                 Log.d("Main: ", response.message())
 
-                output.text = response.body().toString()
-                outputcode.text = response.toString()
+                if(response.body().toString()=="0") {
+                    output.text = response.body().toString() + ": Hospitalization Not Likely"
+                    outputcode.text = response.toString()
+                }else{
+                    output.text = response.body().toString() + ": Hospitalization Likely"
+                    outputcode.text = response.toString()
+                }
 
             }else{
                 Log.d("Error response", response.errorBody().toString())

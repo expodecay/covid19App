@@ -14,7 +14,7 @@ interface WebServiceApi {
 
      */
     @GET("Production/patient")
-    suspend fun getPost(): Response<Number>
+    suspend fun getPost(): Response<Post>
 
     @POST("Production/patient")
     suspend fun AWS(
@@ -24,5 +24,5 @@ interface WebServiceApi {
     @POST("/")
     suspend fun Heroku(
         @Body post: Post
-    ): Response<Number>
+    ): Response<Post>
 }

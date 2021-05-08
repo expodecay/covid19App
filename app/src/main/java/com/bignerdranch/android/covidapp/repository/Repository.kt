@@ -6,7 +6,7 @@ import retrofit2.Response
 
 class Repository {
 
-    suspend fun getPost(): Response<Number>{
+    suspend fun getPost(): Response<Post>{
         return RetrofitInstance.api.getPost()
     }
 
@@ -14,7 +14,7 @@ class Repository {
         return RetrofitInstance.api.AWS(post)
     }
 
-    suspend fun Heroku(post: Post): Response<Number>{
+    suspend fun Heroku(post: Post): Response<Post>{
         return RetrofitInstance.api.Heroku(post)
     }
 }
