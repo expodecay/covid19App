@@ -129,13 +129,9 @@ class QBFragment : Fragment() {
 
         val lastButton = view?.findViewById<Button>(R.id.showInput) as TextView
         lastButton.setOnClickListener {
-            // get the fragment instance
             val nextFragment = ResponseFragment()
-            // get the support fragment manager instance
             val manager = (context as MainActivity).supportFragmentManager
-            // begin fragment transaction using fragment manager
             val transaction = manager.beginTransaction()
-            // replace fragment in the container and finish the transaction
             transaction.replace(R.id.frameLayout, nextFragment)
             transaction.addToBackStack(null)
             transaction.commit()

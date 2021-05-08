@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -70,7 +71,8 @@ class ResponseFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val output = view?.findViewById<TextView>(R.id.out)
+        val homeButton = view?.findViewById<Button>(R.id.home_btn) as TextView
+        val output     = view?.findViewById<TextView>(R.id.out)
         val outputcode = view?.findViewById<TextView>(R.id.code)
 
         val repository = Repository()
@@ -95,10 +97,10 @@ class ResponseFragment : Fragment() {
                 Log.d("Main: ", response.message())
 
                 if(response.body().toString()=="0") {
-                    output.text = response.body().toString() + ": Hospitalization Not Likely"
+                    output.text = response.body().toString() + ":  Hospitalization Not Likely"
                     outputcode.text = response.toString()
                 }else{
-                    output.text = response.body().toString() + ": Hospitalization Likely"
+                    output.text = response.body().toString() + ":  Hospitalization Likely"
                     outputcode.text = response.toString()
                 }
 
@@ -106,6 +108,19 @@ class ResponseFragment : Fragment() {
                 Log.d("Error response", response.errorBody().toString())
             }
         })
+
+        homeButton.setOnClickListener {
+            // get the fragment instance
+            val nextFragment = AgeFragment()
+            // get the support fragment manager instance
+            val manager = (context as MainActivity).supportFragmentManager
+            // begin fragment transaction using fragment manager
+            val transaction = manager.beginTransaction()
+            // replace fragment in the container and finish the transaction
+            transaction.replace(R.id.frameLayout, nextFragment)
+            transaction.addToBackStack(null)
+            transaction.commit()
+        }
 
         /*
         viewModel.getPost()
