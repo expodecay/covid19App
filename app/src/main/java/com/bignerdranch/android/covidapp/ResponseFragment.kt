@@ -120,6 +120,25 @@ class ResponseFragment : Fragment() {
             transaction.replace(R.id.frameLayout, nextFragment)
             transaction.addToBackStack(null)
             transaction.commit()
+            // reset patient values
+            Patient.sex = 0
+            Patient.patient_type = 1
+            Patient.intubed = 2
+            Patient.pneumonia = 2
+            Patient.age = 15
+            Patient.pregnancy = 2
+            Patient.diabetes = 2
+            Patient.copd = 2
+            Patient.asthma = 2
+            Patient.inmsupr = 2
+            Patient.hypertension = 2
+            Patient.other_disease = 2
+            Patient.cardiovascular = 2
+            Patient.obesity = 2
+            Patient.renal_chronic = 2
+            Patient.tobacco = 2
+            Patient.contact_other_covid = 2
+            Patient.icu = 2
         }
 
         /*

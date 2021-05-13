@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 
 
 /**
@@ -48,7 +49,7 @@ class QBFragment : Fragment() {
 
         val yesButton = view?.findViewById<Button>(R.id.yes_button) as TextView
         val noButton = view?.findViewById<Button>(R.id.no_button) as TextView
-        val Button = view?.findViewById<Button>(R.id.qb_next_button) as TextView
+        val nextButton = view?.findViewById<Button>(R.id.qb_next_button) as TextView
 
         yesButton.setOnClickListener {
             if (list[currentIndex-1]=="patient_type")
@@ -83,6 +84,8 @@ class QBFragment : Fragment() {
                 Patient.contact_other_covid = 1
             if (list[currentIndex-1] == "icu")
                 Patient.icu = 1
+            yesButton.isEnabled = false
+            noButton.isEnabled = true
         }
         noButton.setOnClickListener {
             if (list[currentIndex-1]=="patient_type")
@@ -117,14 +120,21 @@ class QBFragment : Fragment() {
                 Patient.contact_other_covid = 2
             if (list[currentIndex-1] == "icu")
                 Patient.icu = 2
+            yesButton.isEnabled = true
+            noButton.isEnabled = false
         }
 
-        Button.setOnClickListener {
-            val testText = view?.findViewById<TextView>(R.id.question_text_view)
-
-            testText.setText(FragquestionBank[currentIndex].textResId)
-            fragmoveToNext()
-            updateQuestion()
+        nextButton.setOnClickListener {
+            if (yesButton.isEnabled && noButton.isEnabled)
+                Toast.makeText(activity, "Please select yes or no", Toast.LENGTH_SHORT)
+            else {
+                val questionText = view?.findViewById<TextView>(R.id.question_text_view)
+                questionText.setText(FragquestionBank[currentIndex].textResId)
+                yesButton.isEnabled = true
+                noButton.isEnabled = true
+                updateQuestion()
+            }
+            if(currentIndex == FragquestionBank.lastIndex) nextButton.isEnabled = false
         }
 
         val lastButton = view?.findViewById<Button>(R.id.showInput) as TextView
@@ -141,20 +151,12 @@ class QBFragment : Fragment() {
         return view
     }
 
-     fun updateQuestion(){
+    fun updateQuestion(){
+        if(currentIndex == FragquestionBank.lastIndex) {}
+        else currentIndex = currentIndex + 1
+
         // val questionTextResId = questionBank[currentIndex].textResId
         val questionTextResId = fragcurrentQuestionText
-         questionTextView?.setText(questionTextResId)
-    }
-
-    fun fragmoveToNext(){
-        if(currentIndex == FragquestionBank.lastIndex){
-            currentIndex = FragquestionBank.lastIndex
-            //
-            // Need to transition to confirmation and transfer module
-        }
-        else {
-            currentIndex = currentIndex + 1
-        }
+        questionTextView?.setText(questionTextResId)
     }
 }
