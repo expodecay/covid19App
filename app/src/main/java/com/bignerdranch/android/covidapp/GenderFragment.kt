@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 
 /**
  * A simple [Fragment] subclass.
@@ -24,12 +25,16 @@ class GenderFragment : Fragment() {
 
         val Button = view?.findViewById<Button>(R.id.gender_next_button) as TextView
         Button.setOnClickListener {
-            val nextFragment = QBFragment()
-            val manager = (context as MainActivity).supportFragmentManager
-            val transaction = manager.beginTransaction()
-            transaction.replace(R.id.frameLayout, nextFragment)
-            transaction.addToBackStack(null)
-            transaction.commit()
+            if(Patient.sex == 0)
+                Toast.makeText(activity, "Please select a gender", Toast.LENGTH_SHORT).show()
+            else {
+                val nextFragment = QBFragment()
+                val manager = (context as MainActivity).supportFragmentManager
+                val transaction = manager.beginTransaction()
+                transaction.replace(R.id.frameLayout, nextFragment)
+                transaction.addToBackStack(null)
+                transaction.commit()
+            }
         }
             return view
     }
@@ -42,10 +47,14 @@ class GenderFragment : Fragment() {
 
         maleButton.setOnClickListener {
             Patient.sex = 2
+            maleButton.isEnabled = false
+            femaleButton.isEnabled = true
         }
 
         femaleButton.setOnClickListener {
             Patient.sex = 1
+            femaleButton.isEnabled = false
+            maleButton.isEnabled = true
         }
     }
 }

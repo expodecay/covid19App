@@ -27,7 +27,7 @@ fun main() {
 }
 
 */
-    var sex:Int             = 2
+    var sex:Int             = 0
     var patient_type:Int    = 1
     var intubed:Int         = 2
     var pneumonia:Int       = 2
